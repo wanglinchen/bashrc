@@ -116,4 +116,19 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Begin:设置终端显示英文
+if [ "$TERM"="linux" ]; then 
+	export LANGUAGE=en_US 
+	export LANG=en_US.UTF-8 
+fi 
+# End:设置终端显示英文
+
+# Begin:设置终端个性化显示
 PS1="\[\033[1;32m\]\u\[\033[1;33m\]@\[\033[1;34m\]\h\[\033[0;37m\]:\[\033[1;35m\]\w \n\[\033[0;36m\]\t \[\033[0;31m\]$\[\033[0m\] "
+# End:设置终端个性化显示
+
+# set PATH for user's private 
+
+REPO_PATH=/home/cwl/App/repo
+
+PATH=$PATH:${REPO_PATH}
